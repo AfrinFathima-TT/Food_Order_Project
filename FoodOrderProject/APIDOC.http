@@ -1,0 +1,84 @@
+###
+GET  http://127.0.0.1:8000/food/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/food/
+Content-Type: application/json
+
+{
+    "food_name": "Apple Juice",
+    "category": "Drinks",
+    "description": "Apple juice with nuts",
+    "price": "200.00",
+    "quantity": 30,
+    "restaurant_name": "Malabar Restaurant",
+    "is_available": true
+}
+
+
+###
+GET  http://127.0.0.1:8000/food/1/
+Accept: application/json
+
+
+###
+PUT  http://127.0.0.1:8000/food/1/
+Content-Type: application/json
+
+{
+  "food_name": "Chicken Biriyani",
+  "category": "Main Course",
+  "description": "Spicy chicken biriyani",
+  "price": "200.00",
+  "quantity": 35,
+  "restaurant_name": "Malabar Restaurant",
+  "is_available": true
+}
+
+###
+DELETE   http://127.0.0.1:8000/food/2/
+
+
+
+###
+GET  http://127.0.0.1:8000/order/
+Accept: application/json
+
+
+###
+POST   http://127.0.0.1:8000/order/
+Content-Type: application/json
+
+{
+    "customer_name": "Zaya",
+    "customer_email": "zaya@gmail.com",
+    "mobile": "9876544326",
+    "food_id": 3,
+    "food_name": "Apple Juice",
+    "quantity": 4,
+    "total_amount": "800.00",
+    "order_status": "Pending"
+}
+
+###
+GET  http://127.0.0.1:8000/order/2/
+Accept: application/json
+
+###
+PUT   http://127.0.0.1:8000/order/2/
+Content-Type: application/json
+
+{
+  "customer_name": "Nayana",
+  "customer_email": "nayana@gmail.com",
+  "mobile": "9874344326",
+  "food_id": 3,
+  "food_name": "Apple Juice",
+  "quantity": 3,
+  "total_amount": "600.00",
+  "order_status": "Pending"
+}
+
+###
+DELETE    http://127.0.0.1:8000/order/3/
